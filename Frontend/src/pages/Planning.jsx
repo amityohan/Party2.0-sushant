@@ -3,15 +3,18 @@ import { Sparkles, Settings } from "lucide-react";
 import { Button } from "../components/Button";
 import { Card, CardContent } from "../components/Card";
 import { useNavigate } from "react-router-dom";
-
+import photography from "../assets/photography.png"
+import musicDj from "../assets/musicDj.png"
+import decor from "../assets/decor.png"
+import catering from "../assets/catering.png"
 
 const PartyPlanningPage = () => {
   const navigate=useNavigate();
   const individualServices = [
-    { title: "Catering", image: "/images/catering.jpg" },
-    { title: "Decor", image: "/images/decor.jpg" },
-    { title: "Music / DJ", image: "/images/dj.jpg" },
-    { title: "Photography", image: "/images/photo.jpg" },
+    { title: "Catering", image: catering },
+    { title: "Decor", image: decor },
+    { title: "Music / DJ", image: musicDj },
+    { title: "Photography", image: photography },
   ];
 
   return (
@@ -37,7 +40,7 @@ const PartyPlanningPage = () => {
               <p className="text-sm text-gray-600 mb-4">
                 Choose each element yourself — from cuisine and caterers to DJs, décor and photographers.
               </p>
-              <Button className="bg-white border text-gray-800 hover:bg-gray-100 flex gap-2 items-center text-sm px-4 py-2">
+              <Button className="bg-pink-600 hover:bg-pink-700 text-white flex gap-2 items-center text-sm px-4 py-2">
                 <Settings size={16} /> Build Your Own Party
               </Button>
             </div>

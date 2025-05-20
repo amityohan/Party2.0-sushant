@@ -45,48 +45,6 @@ export default function Homepage() {
             <Button className="w-full" onClick={()=>{navigate('/planning-party')}}>Continue</Button>
         </section>
 
-        {/* How It Works + Planning Options Combined */}
-        {/* <section className="bg-gray-50 py-16 mt-16">
-            <div className="max-w-4xl mx-auto text-center space-y-10">
-            <h2 className="text-2xl font-semibold">How Would You Like to Plan?</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div className="p-6 border rounded-xl bg-white shadow text-left">
-                <h4 className="text-lg font-medium mb-2">✨ Party Wizard</h4>
-                <p className="text-sm text-gray-600 mb-4">Tell us your party details and we’ll show you a ready-to-book package tailored to your needs.</p>
-                <Button className="bg-pink-600 hover:bg-pink-700 text-white flex gap-2 items-center text-sm px-4 py-2">
-                    <Sparkles size={16} /> Use Party Wizard
-                </Button>
-                </div>
-                <div className="p-6 border rounded-xl bg-white shadow text-left">
-                <h4 className="text-lg font-medium mb-2">🛠️ Build Your Own Party</h4>
-                <p className="text-sm text-gray-600 mb-4">Choose each element yourself — from cuisine and caterers to DJs, décor and photographers.</p>
-                <Button className="bg-white border text-gray-800 hover:bg-gray-100 flex gap-2 items-center text-sm px-4 py-2">
-                    <Settings size={16} /> Build Your Own Party
-                </Button>
-                </div>
-            </div>
-            </div>
-        </section>
-
-        {/* Select Individual Services */}
-        {/* <section className="max-w-6xl mx-auto py-16 px-6">
-            <h2 className="text-2xl font-semibold text-center mb-8">Select Individual Services</h2>
-            <p className="text-center text-gray-600 mb-6">Browse and book individual services without needing a full package.</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-                { title: "Catering", image: "/images/catering.jpg" },
-                { title: "Decor", image: "/images/decor.jpg" },
-                { title: "Music / DJ", image: "/images/dj.jpg" },
-                { title: "Photography", image: "/images/photo.jpg" }
-            ].map((item) => (
-                <Card key={item.title} className="overflow-hidden cursor-pointer hover:shadow-xl transition">
-                <img src={item.image} alt={item.title} className="w-full h-40 object-cover" />
-                <CardContent className="p-4 text-center font-semibold">{item.title}</CardContent>
-                </Card>
-            ))}
-            </div>
-        </section> */}
-
         {/* Footer */}
         <footer className="bg-white py-6 text-center text-sm text-gray-500">
             © 2025 PartyEasy. Designed with care in the UK.

@@ -1,6 +1,11 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { Card, CardContent } from "../components/Card";
+import gardernBBQparty from "../assets/gardernBBQparty.png"
+import elegantSetup from "../assets/elegantSetup.png"
+import completeSetup from "../assets/compeleteSetup.png"
+import { useNavigate } from "react-router-dom";
+
 
 const packages = [
   {
@@ -12,7 +17,7 @@ const packages = [
       Music: ["DJ with Lighting", "3-Hour Playlist"],
       Photographer: ["2 Hours", "50 Edited Photos"]
     },
-    image: "/images/party-combo-1.jpg"
+    image: completeSetup
   },
   {
     title: "Elegant Indoors Setup",
@@ -22,7 +27,7 @@ const packages = [
       Decoration: ["Floral Setup", "Dining Arrangement"],
       Music: ["Background Music"]
     },
-    image: "/images/party-combo-2.jpg"
+    image: elegantSetup
   },
   {
     title: "Garden BBQ Bash",
@@ -32,11 +37,13 @@ const packages = [
       Decoration: ["Garden Lights", "Rustic Tables"],
       Music: ["Live Acoustic Band"]
     },
-    image: "/images/party-combo-3.jpg"
+    image: gardernBBQparty,
+    navigateTo:"/gardern-bbq-bash"
   }
 ];
 
 export default function PartyWizardPage() {
+  const navigate = useNavigate()
   return (
     <div className="max-w-6xl mx-auto py-12 px-4 space-y-8">
       <h1 className="text-3xl font-bold text-center">Recommended Party Packages</h1>
@@ -59,7 +66,7 @@ export default function PartyWizardPage() {
                 </div>
               ))}
               <div className="text-pink-600 font-bold">£{pkg.price}</div>
-              <Button className="w-full mt-2">View Details</Button>
+              <Button className="w-full mt-2" onClick={()=>{navigate(`${pkg.navigateTo}`)}}>View Details</Button>
             </CardContent>
           </Card>
         ))}
